@@ -123,7 +123,7 @@ body,
   height: 100%;
 }
 body {
-  background: #eee;
+  background: rgba(95,160,156,0.2);
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -174,7 +174,7 @@ body {
   -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   z-index: 1;
-  background: #eee;
+  background: rgba(95,160,156,0.2);
 }
 .mobile-nav-on #wrap {
   left: 280px;
@@ -194,7 +194,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #999;
+  color: #796d7b;
   margin-bottom: 1em;
   margin-left: 5px;
   line-height: 1em;
@@ -204,10 +204,10 @@ body {
 .article-inner,
 .archive-article-inner {
   background: #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
+  -webkit-box-shadow: 1px 2px 3px #9cb37c;
+  box-shadow: 1px 2px 3px #9cb37c;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .article-entry h1,
 .widget h1 {
@@ -232,7 +232,7 @@ body {
 .article-entry h6,
 .widget h6 {
   font-size: 1em;
-  color: #999;
+  color: #796d7b;
 }
 .article-entry hr,
 .widget hr {
@@ -308,7 +308,7 @@ body {
   font-weight: bold;
 }
 #header {
-  height: 300px;
+  height: 500px;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
@@ -348,7 +348,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("images/banner.jpg") center #000;
+  background: url("images/banner.jpeg") center #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -365,7 +365,7 @@ body {
 #logo,
 #subtitle {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-weight: 300;
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
@@ -375,6 +375,7 @@ body {
   letter-spacing: 2px;
 }
 #subtitle {
+  color: #ea5959;
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 1px;
@@ -389,8 +390,8 @@ body {
 .nav-icon,
 .main-nav-link {
   float: left;
-  color: #fff;
-  opacity: 0.6;
+  color: #180f0f;
+  opacity: 0.8;
   text-decoration: none;
   text-shadow: 0 1px rgba(0,0,0,0.2);
   -webkit-transition: opacity 0.2s;
@@ -509,6 +510,7 @@ body {
 }
 .article-inner {
   overflow: hidden;
+  padding: 10%;
 }
 .article-meta:before,
 .article-meta:after {
@@ -651,7 +653,7 @@ a.article-title:hover {
   margin-left: 1em;
 }
 .article-entry .caption {
-  color: #999;
+  color: #796d7b;
   display: block;
   font-size: 0.9em;
   margin-top: 0.5em;
@@ -679,8 +681,8 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #eee;
-  color: #999;
+  background: rgba(95,160,156,0.2);
+  color: #796d7b;
   text-shadow: 0 1px #fff;
   text-decoration: none;
 }
@@ -706,7 +708,7 @@ a.article-title:hover {
   clear: both;
 }
 .article-footer a {
-  color: #999;
+  color: #796d7b;
   text-decoration: none;
 }
 .article-footer a:hover {
@@ -770,7 +772,7 @@ a.article-title:hover {
 .article-nav-link-wrap {
   text-decoration: none;
   text-shadow: 0 1px #fff;
-  color: #999;
+  color: #796d7b;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -846,7 +848,7 @@ a.article-title:hover {
   line-height: 36px;
 }
 .article-share-links {
-  background: #eee;
+  background: rgba(95,160,156,0.2);
 }
 .article-share-links:before,
 .article-share-links:after {
@@ -1013,7 +1015,7 @@ a.article-title:hover {
   margin-top: 1em;
 }
 .archive-article-date {
-  color: #999;
+  color: #796d7b;
   text-decoration: none;
   font-size: 0.85em;
   line-height: 1em;
@@ -1028,7 +1030,7 @@ a.article-title:hover {
   border: 1px solid #ddd;
   border-radius: 3px;
   text-align: center;
-  color: #999;
+  color: #796d7b;
   overflow: hidden;
 }
 #page-nav:before,
@@ -1046,11 +1048,11 @@ a.article-title:hover {
   height: 2ex;
 }
 #page-nav a {
-  color: #999;
+  color: #796d7b;
   text-decoration: none;
 }
 #page-nav a:hover {
-  background: #999;
+  background: #796d7b;
   color: #fff;
 }
 #page-nav .prev {
@@ -1075,10 +1077,10 @@ a.article-title:hover {
   color: #ddd;
 }
 #footer {
-  background: #262a30;
+  background: rgba(177,186,185,0.5);
   padding: 50px 0;
   border-top: 1px solid #ddd;
-  color: #999;
+  color: #796d7b;
 }
 #footer a {
   color: #258fb8;
@@ -1089,18 +1091,18 @@ a.article-title:hover {
 }
 #footer-info {
   line-height: 1.6em;
-  font-size: 0.85em;
+  font-size: 1.1em;
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: #2d2d2d;
+  background: #fff;
   margin: 0 -20px;
   padding: 15px 20px;
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
   overflow: auto;
-  color: #ccc;
+  color: #000;
   line-height: 22.400000000000002px;
 }
 .article-entry .highlight .gutter pre,
@@ -1113,7 +1115,7 @@ a.article-title:hover {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #eee;
+  background: rgba(95,160,156,0.2);
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
@@ -1167,7 +1169,7 @@ a.article-title:hover {
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
-  background: #2d2d2d;
+  background: #fff;
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -1193,7 +1195,7 @@ a.article-title:hover {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: #2d2d2d;
+  background: #fff;
   color: #999;
   font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-shadow: 0 0;
@@ -1278,7 +1280,7 @@ pre .javascript .function {
 @media screen and (max-width: 479px) {
   .mobile-nav-link {
     display: block;
-    color: #999;
+    color: #796d7b;
     text-decoration: none;
     padding: 15px 20px;
     font-weight: bold;
@@ -1301,7 +1303,7 @@ pre .javascript .function {
 .widget {
   color: #777;
   text-shadow: 0 1px #fff;
-  background: #ddd;
+  background: #fff;
   -webkit-box-shadow: 0 -1px 4px #ccc inset;
   box-shadow: 0 -1px 4px #ccc inset;
   border: 1px solid #ccc;
@@ -1355,7 +1357,7 @@ pre .javascript .function {
 .tag-list-count,
 .archive-list-count {
   padding-left: 5px;
-  color: #999;
+  color: #796d7b;
   font-size: 0.85em;
 }
 .category-list-count:before,
