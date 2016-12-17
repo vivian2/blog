@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>丸子爱发疯</title>
+  <title>关于《webkit技术内幕》的读书笔记 | 丸子爱发疯</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="随笔,记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="丸子爱发疯">
-<meta property="og:url" content="https://vivian2.github.io/blog/index.html">
+  <meta name="description" content="前言读这本书的目的是想了解有关浏览器的相关知识，但可能对于我而言，读的有些困难。大致浏览了下涉及的范围还挺广的.可能水平原因，收获不是很大，再过段时间，再读一次，且看如何。
+webkit的渲染过程从网页URL到构建完DOM树这个过程，数字表示基本顺序，这个过程可能重复并且交叉1.当用户输入网页URL的时候，WebKit调用其资源加载器加载该URL对应的网页。2.加载器依赖网络模块建立连接，发送请求">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于《webkit技术内幕》的读书笔记">
+<meta property="og:url" content="https://vivian2.github.io/blog/2016/12/03/readWebkit/index.html">
 <meta property="og:site_name" content="丸子爱发疯">
-<meta property="og:description" content="随笔,记录">
+<meta property="og:description" content="前言读这本书的目的是想了解有关浏览器的相关知识，但可能对于我而言，读的有些困难。大致浏览了下涉及的范围还挺广的.可能水平原因，收获不是很大，再过段时间，再读一次，且看如何。
+webkit的渲染过程从网页URL到构建完DOM树这个过程，数字表示基本顺序，这个过程可能重复并且交叉1.当用户输入网页URL的时候，WebKit调用其资源加载器加载该URL对应的网页。2.加载器依赖网络模块建立连接，发送请求">
+<meta property="og:updated_time" content="2016-12-17T15:10:06.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="丸子爱发疯">
-<meta name="twitter:description" content="随笔,记录">
+<meta name="twitter:title" content="关于《webkit技术内幕》的读书笔记">
+<meta name="twitter:description" content="前言读这本书的目的是想了解有关浏览器的相关知识，但可能对于我而言，读的有些困难。大致浏览了下涉及的范围还挺广的.可能水平原因，收获不是很大，再过段时间，再读一次，且看如何。
+webkit的渲染过程从网页URL到构建完DOM树这个过程，数字表示基本顺序，这个过程可能重复并且交叉1.当用户输入网页URL的时候，WebKit调用其资源加载器加载该URL对应的网页。2.加载器依赖网络模块建立连接，发送请求">
   
     <link rel="alternate" href="/atom.xml" title="丸子爱发疯" type="application/atom+xml">
   
@@ -66,54 +70,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2016/12/17/hello-world/" class="article-date">
-  <time datetime="2016-12-17T05:29:18.255Z" itemprop="datePublished">2016-12-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/12/17/hello-world/">hexo搭建个人博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://vivian2.github.io/blog/blog/2016/12/17/hello-world/" data-id="ciwtbdq2t0000lcr123lkq188" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-readWebkit" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-readWebkit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2016/12/03/readWebkit/" class="article-date">
   <time datetime="2016-12-03T14:40:37.000Z" itemprop="datePublished">2016-12-03</time>
@@ -126,8 +83,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/12/03/readWebkit/">关于《webkit技术内幕》的读书笔记</a>
+    <h1 class="article-title" itemprop="name">
+      关于《webkit技术内幕》的读书笔记
     </h1>
   
 
@@ -149,10 +106,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2016/12/17/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hexo搭建个人博客
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 </section>
         
