@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>css writing modes | 丸子爱发疯</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言主要是无意中发现了介绍关于writing modes 的文章，第一反映竟然是很像小学出的黑板报的感觉。
+writing-mode123456789/* Keyword values */writing-mode: horizontal-tb;writing-mode: vertical-rl;writing-mode: vertical-lr;/* Global values */writin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css writing modes">
+<meta property="og:url" content="https://vivian2.github.io/blog/2017/02/12/css-writing-modes/index.html">
+<meta property="og:site_name" content="丸子爱发疯">
+<meta property="og:description" content="前言主要是无意中发现了介绍关于writing modes 的文章，第一反映竟然是很像小学出的黑板报的感觉。
+writing-mode123456789/* Keyword values */writing-mode: horizontal-tb;writing-mode: vertical-rl;writing-mode: vertical-lr;/* Global values */writin">
+<meta property="og:image" content="https://vivian2.github.io/blog/blog/emoji.png">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png">
+<meta property="og:image" content="https://vivian2.github.io/blog/blog/css-writing-modes.png">
+<meta property="og:updated_time" content="2017-02-12T10:32:30.500Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css writing modes">
+<meta name="twitter:description" content="前言主要是无意中发现了介绍关于writing modes 的文章，第一反映竟然是很像小学出的黑板报的感觉。
+writing-mode123456789/* Keyword values */writing-mode: horizontal-tb;writing-mode: vertical-rl;writing-mode: vertical-lr;/* Global values */writin">
+<meta name="twitter:image" content="https://vivian2.github.io/blog/blog/emoji.png">
+  
+    <link rel="alternate" href="/atom.xml" title="丸子爱发疯" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">丸子爱发疯</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">for young</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://vivian2.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-writing-modes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2017/02/12/css-writing-modes/" class="article-date">
+  <time datetime="2017-02-12T06:28:44.000Z" itemprop="datePublished">2017-02-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css writing modes
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>主要是无意中发现了介绍关于writing modes 的文章，第一反映竟然是很像小学出的黑板报的感觉<img src="/blog/emoji.png" alt="" style="display: inline;vertical-align: middle;width: 2em;">。</p>
+<h3 id="writing-mode"><a href="#writing-mode" class="headerlink" title="writing-mode"></a>writing-mode</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/* Keyword values */</div><div class="line">writing-mode: horizontal-tb;</div><div class="line">writing-mode: vertical-rl;</div><div class="line">writing-mode: vertical-lr;</div><div class="line"></div><div class="line">/* Global values */</div><div class="line">writing-mode: inherit;</div><div class="line">writing-mode: initial;</div><div class="line">writing-mode: <span class="built_in">unset</span>;</div></pre></td></tr></table></figure>
+<p>表现方式如下图<br><img src="https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png" alt="" style="height: 430px; width: 351px;"></p>
+<p>浏览器的兼容情况如下图<br><img src="/blog/css-writing-modes.png" alt="browser compatibility"><br>文章来源 (<a href="https://24ways.org/2016/css-writing-modes/" target="_blank" rel="external">https://24ways.org/2016/css-writing-modes/</a>)<br>几种实现方式(<a href="http://labs.jensimmons.com/#writing-modes" target="_blank" rel="external">http://labs.jensimmons.com/#writing-modes</a>)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vivian2.github.io/blog/blog/2017/02/12/css-writing-modes/" data-id="ciz2b178t0003f8r19gwdto6j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2016/12/18/css-flex-layout/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">css flex layout</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2017/02/12/css-writing-modes/">css writing modes</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/12/18/css-flex-layout/">css flex layout</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/12/17/hello-world/">hexo搭建个人博客</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/12/03/readWebkit/">关于《webkit技术内幕》的读书笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 vivian<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+  </div>
+</body>
+</html>
