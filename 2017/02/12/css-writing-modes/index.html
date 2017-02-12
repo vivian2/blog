@@ -16,7 +16,9 @@ writing-mode123456789/* Keyword values */writing-mode: horizontal-tb;writing-mod
 <meta property="og:image" content="https://vivian2.github.io/blog/blog/emoji.png">
 <meta property="og:image" content="https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png">
 <meta property="og:image" content="https://vivian2.github.io/blog/blog/css-writing-modes.png">
-<meta property="og:updated_time" content="2017-02-12T10:32:30.500Z">
+<meta property="og:image" content="https://vivian2.github.io/blog/blog/writing.png">
+<meta property="og:image" content="https://vivian2.github.io/blog/blog/writing-upright.png">
+<meta property="og:updated_time" content="2017-02-12T11:30:46.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css writing modes">
 <meta name="twitter:description" content="前言主要是无意中发现了介绍关于writing modes 的文章，第一反映竟然是很像小学出的黑板报的感觉。
@@ -99,12 +101,19 @@ writing-mode123456789/* Keyword values */writing-mode: horizontal-tb;writing-mod
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>主要是无意中发现了介绍关于writing modes 的文章，第一反映竟然是很像小学出的黑板报的感觉<img src="/blog/emoji.png" alt="" style="display: inline;vertical-align: middle;width: 2em;">。</p>
 <h3 id="writing-mode"><a href="#writing-mode" class="headerlink" title="writing-mode"></a>writing-mode</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/* Keyword values */</div><div class="line">writing-mode: horizontal-tb;</div><div class="line">writing-mode: vertical-rl;</div><div class="line">writing-mode: vertical-lr;</div><div class="line"></div><div class="line">/* Global values */</div><div class="line">writing-mode: inherit;</div><div class="line">writing-mode: initial;</div><div class="line">writing-mode: <span class="built_in">unset</span>;</div></pre></td></tr></table></figure>
 <p>表现方式如下图<br><img src="https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png" alt="" style="height: 430px; width: 351px;"></p>
-<p>浏览器的兼容情况如下图<br><img src="/blog/css-writing-modes.png" alt="browser compatibility"><br>文章来源 (<a href="https://24ways.org/2016/css-writing-modes/" target="_blank" rel="external">https://24ways.org/2016/css-writing-modes/</a>)<br>几种实现方式(<a href="http://labs.jensimmons.com/#writing-modes" target="_blank" rel="external">http://labs.jensimmons.com/#writing-modes</a>)</p>
+<p>浏览器的兼容情况如下图<br><img src="/blog/css-writing-modes.png" alt="browser compatibility"></p>
+<h3 id="IE8-的实现方式"><a href="#IE8-的实现方式" class="headerlink" title="IE8+的实现方式"></a>IE8+的实现方式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">writing-mode: lr-tb | tb-rl | tb-lr (IE8+);</div><div class="line">writing-mode: horizontal-tb | vertical-rl | vertical-lr;</div></pre></td></tr></table></figure>
+<h4 id="1-writing-mode与text-orientation"><a href="#1-writing-mode与text-orientation" class="headerlink" title="1.writing-mode与text-orientation"></a>1.writing-mode与text-orientation</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</div><div class="line">	h1&#123;</div><div class="line">	    writing-mode:vertical-rl;</div><div class="line">          &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;h1&gt;writing&lt;/h1&gt;</div></pre></td></tr></table></figure>
+<p>在firefox 51浏览器下的结果为<br><img src="/blog/writing.png"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</div><div class="line">	h1&#123;</div><div class="line">	    writing-mode:vertical-rl;</div><div class="line">	    text-orientation: upright;//IE浏览器与Safari浏览器不支持</div><div class="line">          &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;h1&gt;writing&lt;/h1&gt;</div></pre></td></tr></table></figure></p>
+<p>在firefox 51浏览器下的结果为<br><img src="/blog/writing-upright.png"></p>
+<h4 id="2-writing-mode-与-text-indent"><a href="#2-writing-mode-与-text-indent" class="headerlink" title="2.writing-mode 与 text-indent"></a>2.writing-mode 与 text-indent</h4><p>实现方式感觉开了一个小脑动，围观学习。</p>
+<p><a href="http://www.zhangxinxu.com/study/201604/writing-mode-text-indent-vertical-down.html" style="font-size: 16px" target="_blank" rel="external">用来实现的是文字下沉功能</a></p>
+<p>一看就懂的MDN(<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode</a>)<br>入门级文章 像是介绍writing-mode被设计的初衷 (<a href="https://24ways.org/2016/css-writing-modes/" target="_blank" rel="external">https://24ways.org/2016/css-writing-modes/</a>)<br>这个是上面提及的文章中的示例(<a href="http://labs.jensimmons.com/#writing-modes" target="_blank" rel="external">http://labs.jensimmons.com/#writing-modes</a>)<br>writing modes 的介绍使用及周边 (<a href="http://www.zhangxinxu.com/wordpress/2016/04/css-writing-mode/" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2016/04/css-writing-mode/</a>)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vivian2.github.io/blog/blog/2017/02/12/css-writing-modes/" data-id="ciz2b178t0003f8r19gwdto6j" class="article-share-link">Share</a>
+      <a data-url="https://vivian2.github.io/blog/blog/2017/02/12/css-writing-modes/" data-id="ciz2mknbh000160r1bb77ai4t" class="article-share-link">Share</a>
       
       
     </footer>

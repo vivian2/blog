@@ -206,7 +206,7 @@ body {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #9cb37c;
   box-shadow: 1px 2px 3px #9cb37c;
-  border: 1px solid #ddd;
+  border: 1px solid #e0b0b0;
   border-radius: 5px;
 }
 .article-entry h1,
@@ -236,7 +236,7 @@ body {
 }
 .article-entry hr,
 .widget hr {
-  border: 1px dashed #ddd;
+  border: 1px dashed #e0b0b0;
 }
 .article-entry strong,
 .widget strong {
@@ -310,7 +310,7 @@ body {
 #header {
   height: 500px;
   position: relative;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e0b0b0;
 }
 #header:before,
 #header:after {
@@ -617,11 +617,11 @@ a.article-title:hover {
 }
 .article-entry th {
   font-weight: bold;
-  border-bottom: 3px solid #ddd;
+  border-bottom: 3px solid #e0b0b0;
   padding-bottom: 0.5em;
 }
 .article-entry td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e0b0b0;
   padding: 10px 0;
 }
 .article-entry blockquote {
@@ -695,7 +695,7 @@ a.article-title:hover {
 .article-footer {
   font-size: 0.85em;
   line-height: 1.6em;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e0b0b0;
   padding-top: 1.6em;
   margin: 0 20px 20px;
 }
@@ -764,7 +764,7 @@ a.article-title:hover {
     margin-left: -4px;
     content: "";
     border-radius: 50%;
-    background: #ddd;
+    background: #e0b0b0;
     -webkit-box-shadow: 0 1px 2px #fff;
     box-shadow: 0 1px 2px #fff;
   }
@@ -806,7 +806,7 @@ a.article-title:hover {
 .article-nav-caption {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #ddd;
+  color: #e0b0b0;
   line-height: 1em;
   font-weight: bold;
 }
@@ -814,9 +814,8 @@ a.article-title:hover {
   margin-right: -2px;
 }
 .article-nav-title {
-  font-size: 0.85em;
+  font-size: 1em;
   line-height: 1.6em;
-  margin-top: 0.5em;
 }
 .article-share-box {
   position: absolute;
@@ -842,7 +841,7 @@ a.article-title:hover {
   padding: 0 15px;
   color: #555;
   outline: none;
-  border: 1px solid #ddd;
+  border: 1px solid #e0b0b0;
   border-radius: 3px 3px 0 0;
   height: 36px;
   line-height: 36px;
@@ -948,7 +947,7 @@ a.article-title:hover {
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #e0b0b0;
   border-radius: 3px;
   margin: 50px 0;
 }
@@ -1027,7 +1026,7 @@ a.article-title:hover {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
-  border: 1px solid #ddd;
+  border: 1px solid #e0b0b0;
   border-radius: 3px;
   text-align: center;
   color: #796d7b;
@@ -1074,12 +1073,12 @@ a.article-title:hover {
   font-weight: bold;
 }
 #page-nav .space {
-  color: #ddd;
+  color: #e0b0b0;
 }
 #footer {
   background: rgba(177,186,185,0.5);
   padding: 50px 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e0b0b0;
   color: #796d7b;
 }
 #footer a {
@@ -1099,7 +1098,7 @@ a.article-title:hover {
   margin: 0 -20px;
   padding: 15px 20px;
   border-style: solid;
-  border-color: #ddd;
+  border-color: #e0b0b0;
   border-width: 1px 0;
   overflow: auto;
   color: #000;
@@ -1167,7 +1166,7 @@ a.article-title:hover {
 .article-entry .gist {
   margin: 0 -20px;
   border-style: solid;
-  border-color: #ddd;
+  border-color: #e0b0b0;
   border-width: 1px 0;
   background: #fff;
   padding: 15px 20px 15px 0;
@@ -1313,7 +1312,6 @@ pre .javascript .function {
 .widget a {
   color: #258fb8;
   text-decoration: none;
-  font-size: 16px;
 }
 .widget a:hover {
   text-decoration: underline;
